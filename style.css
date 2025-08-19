@@ -66,28 +66,6 @@ a {
     font-size: 24px;
 }
 
-/* --- Splash Screen --- */
-.splash-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    height: 100vh;
-}
-
-.splash-screen img {
-    width: 128px;
-    height: 128px;
-}
-
-.splash-screen h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--primary);
-    margin-top: 16px;
-}
-
 /* --- Home Screen --- */
 .home-screen {
     position: relative;
@@ -221,10 +199,20 @@ a {
     background-color: var(--gray);
 }
 
-.lyric-item p {
+.lyric-item-details {
+    flex-grow: 1;
+}
+
+.lyric-item-details p {
     margin: 0;
     font-size: 18px;
     font-weight: 600;
+}
+
+.lyric-item-details .reciter {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 4px;
 }
 
 .lyric-item .icon {
@@ -442,4 +430,47 @@ a {
     color: #D3D3D3; /* LightGray */
     line-height: 1.5;
     margin: 0;
+}
+
+/* --- Marsiya List Screen (NEW) --- */
+.marsiya-list-container {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.marsiya-category {
+    background-color: #E6F5E6;
+    color: #000;
+    border: 1px solid #006400;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.marsiya-lyrics-container {
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.marsiya-lyric-item, .empty-marsiya-category {
+    background-color: #C8E6C9;
+    color: #000;
+    border: 1px solid #006400;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.empty-marsiya-category {
+    color: #333;
+    font-size: 14px;
+    cursor: default;
 }
